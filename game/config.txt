@@ -1,0 +1,5 @@
+{
+    "ip_address" : "localhost",
+    "port" : "9999",
+    "test_mode" : 1
+}

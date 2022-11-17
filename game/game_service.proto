@@ -1,0 +1,77 @@
+syntax = "proto3";
+package protos;
+
+message New_game{
+    int32 name = 1;
+}
+
+message Game{
+    int32 stat = 1;
+    string id = 2;
+    int32 uid = 3;
+}
+
+message New_game_status{
+    string name = 1;
+}
+
+message Status{
+    int32 stat = 1;
+}
+
+message Forward_to_server{
+    int32 gold_up = 1;
+    int32 tech_up = 2;
+    int32 gold = 3;
+    int32 tech = 4;
+    int32 up_foot_att = 5;
+    int32 up_foot_def = 6;
+    int32 up_arch_att = 7;
+    int32 up_arch_def = 8;
+    int32 up_cav_att = 9;
+    int32 up_cav_def = 10;
+    int32 foot = 11;
+    int32 arch = 12;
+    int32 cav = 13;
+    string name = 14;
+    int32 player = 15;
+}
+
+message Forward_to_player{
+    int32 day = 1;
+    int32 field = 2;
+    bool war = 3;
+    int32 gold = 4;
+    int32 tech = 5;
+    int32 foot_att_min = 6;
+    int32 foot_att_max = 7;
+    int32 foot_armor = 8;
+    int32 arch_att_min = 9;
+    int32 arch_att_max = 10;
+    int32 arch_armor = 11;
+    int32 cav_att_min = 12;
+    int32 cav_att_max = 13;
+    int32 cav_armor = 14;
+    int32 winner = 15;
+    repeated int32 enemy = 16;
+    repeated int32 player = 17;
+}
+
+message Game_status{
+    string gid = 1;
+    int32 day = 2;
+}
+
+message Next_Turn_Info{
+    string gid = 1;
+    int32 player = 2;
+}
+
+service TTT{
+    rpc JoinMatchmaking(New_game) returns (Game);
+    rpc Matchmaking_Ready(New_game_status) returns (Status);
+    rpc End_Turn(Forward_to_server) returns (Status);
+    rpc Next_Turn_Status(Game_status) returns (Status);
+    rpc Next_Turn(Next_Turn_Info) returns (Forward_to_player);
+    rpc Test_Clear_Game(Status) returns (Status);
+}

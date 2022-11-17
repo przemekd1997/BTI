@@ -1,0 +1,6 @@
+{
+    "ip_address" : "::",
+    "port" : "9999",
+    "threads" : 10,
+    "base_driver" : "./mg-db-4251d-firebase-adminsdk-qdwkt-92102e2f75.json"
+}

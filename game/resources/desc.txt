@@ -1,0 +1,64 @@
+{
+    "gold_up" : {
+        "name" : "Gold Investments",
+        "desc" : ["Increase gold income by "]
+        },
+    "tech_up" : {
+        "name" : "Technology Investments",
+        "desc" : ["Increase tech point income by "]
+        },
+    "foot_att" : {
+        "name" : "Infantry Swords Improvement",
+        "desc" : ["Increase damage of infantry by "]
+    },
+    "foot_def" : {
+        "name" : "Infantry Armor Improvement",
+        "desc" : ["Increase armor of infantry by "]
+    },
+    "arch_att" : {
+        "name" : "Archer Bow Improvement",
+        "desc" : ["Increase damage of archers by "]
+    },
+    "arch_def" : {
+        "name" : "Infantry Armor Improvement",
+        "desc" : ["Increase armor of archers by "]
+    },
+    "cav_att" : {
+        "name" : "Cavalry Lance Improvement",
+        "desc" : ["Increase damage of cavalry by "]
+    },
+    "cav_def" : {
+        "name" : "Cavalry Armor Improvement",
+        "desc" : ["Increase armor of cavalry by "]
+    },
+    "footman" : {
+        "name" : "Train Footman ",
+        "desc" : [
+            "Class: Infantry",
+            "Damage: ",
+            "Armor: ",
+            "HP: "
+        ]
+    },
+    "archer" : {
+        "name" : "Train Ranger ",
+        "desc" : [
+            "Class: Archer",
+            "Damage: ",
+            "Armor: ",
+            "HP: "
+        ]
+    },
+    "cavalry" : {
+        "name" : "Train Lancer ",
+        "desc" : [
+            "Class: Cavalry",
+            "Damage: ",
+            "Armor: ",
+            "HP: "
+        ]
+    },
+    "end_turn" : {
+        "name" : "End Your Turn"
+    }    
+}
